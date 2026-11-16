@@ -64,7 +64,7 @@ def resolve_french_flag_design(
     unrelated = [score for code, score in valid if code not in FRENCH_TRICOLOR_CLASSES]
     related_mass = sum(score for _, score in related)
     if (
-        len(related) < 3
+        sum(score >= 0.06 for _, score in related) < 3
         or related_mass < 0.90
         or (unrelated and max(unrelated) >= 0.07)
         or valid[0][0] not in FRENCH_TRICOLOR_CLASSES
