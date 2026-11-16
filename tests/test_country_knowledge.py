@@ -652,6 +652,7 @@ Republic.
     enriched = module.enrich_from_encyclopedia(
         record,
         title="Côte d'Ivoire",
+        fast_mode=False,
     )
 
     assert "climate_seasons" in enriched.environment
@@ -745,7 +746,7 @@ def test_geography_failure_does_not_abort_economy_or_transport(monkeypatch):
         lambda *args, **kwargs: ("", ""),
     )
 
-    enriched = module.enrich_from_encyclopedia(record, title="France")
+    enriched = module.enrich_from_encyclopedia(record, title="France", fast_mode=False)
 
     assert "economic_drivers" in enriched.economy
     assert "transport_network" in enriched.infrastructure
