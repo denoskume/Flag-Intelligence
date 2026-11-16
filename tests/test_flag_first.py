@@ -102,8 +102,9 @@ def test_population_fallback_never_claims_a_current_year(monkeypatch):
     monkeypatch.setattr(quick_facts.requests, "get", fake_get)
     facts = quick_facts.fetch_country_facts("fr")
     assert facts.population_year is None
-    assert "non fournie" in facts.population_source
-    assert "pas une population en temps réel" in facts.warning
+    assert facts.population is None
+    assert facts.population_source is None
+    assert "Aucune valeur périmée" in facts.warning
 
 
 def test_flag_first_app_is_valid_python():
