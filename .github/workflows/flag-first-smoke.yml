@@ -7,8 +7,10 @@ on:
       - "app.py"
       - "src/flag_recognition/flag_first_app.py"
       - "src/flag_recognition/flag_matcher.py"
+      - "src/flag_recognition/tricolor.py"
       - "src/flag_recognition/quick_facts.py"
       - "tests/test_flag_first.py"
+      - "tests/test_tricolor.py"
       - ".github/workflows/flag-first-smoke.yml"
   pull_request:
 
@@ -26,9 +28,9 @@ jobs:
           python -m pip install -e . --no-deps
           python -m pip install "streamlit>=1.50,<2" numpy Pillow requests pycountry pytest
       - name: Check Python syntax
-        run: python -m compileall -q app.py src/flag_recognition/flag_first_app.py src/flag_recognition/flag_matcher.py src/flag_recognition/quick_facts.py
+        run: python -m compileall -q app.py src/flag_recognition/flag_first_app.py src/flag_recognition/flag_matcher.py src/flag_recognition/tricolor.py src/flag_recognition/quick_facts.py
       - name: Test recognition and fact retrieval logic
-        run: python -m pytest -q tests/test_flag_first.py
+        run: python -m pytest -q tests/test_flag_first.py tests/test_tricolor.py
       - name: Verify live France flag and population sources
         run: |
           python - <<'PY'
