@@ -1,126 +1,87 @@
-<p>
-  <img align="left" src="assets/flag_intelligence_logo.svg" alt="Flag Intelligence" height="72">
-</p>
-<br clear="both">
+# Flag Intelligence
 
-<h1 align="center">FLAG INTELLIGENCE</h1>
+**Flag recognition first** — a Streamlit computer-vision portfolio project.
 
-<p align="center">
-  <strong>Recognize a national flag or enter a country name to generate a structured country intelligence report.</strong>
-</p>
+**Live demo:** https://flag-intelligence.streamlit.app/
 
-<p align="center">
-  <a href="https://flag-intelligence.streamlit.app/"><strong>Live App</strong></a> · Version 0.1.0
-</p>
+Upload a national flag, photograph it, or choose a demo flag. Flag Intelligence
+attempts to identify the country and presents a concise sourced fact sheet:
+**country name, capital, area (km²), and latest available annual population**.
 
-Flag Intelligence combines **computer vision**, country information and AI-assisted report generation. Users can upload a flag image or enter a country name / ISO code; both paths lead to the same country-report workflow.
+## Recognition pipeline (v0.2)
 
-## Features
-
-- **Two input modes:** flag-image recognition or direct country / ISO-code lookup.
-- **Worldwide taxonomy:** 250 country and territory classes (249 ISO 3166-1 codes + Kosovo, `XK`).
-- **Vision predictions:** confidence, ranked alternatives, ambiguity handling and an open-set decision.
-- **Country Intelligence:** geography, history, government, culture, society, economy, education, science and practical information.
-- **Reports:** structured country snapshot, map, authored narrative, and downloadable **PDF / JSON**.
-- **Quality controls:** deterministic report checks, text cleanup, caching and fallback behavior when a report writer is unavailable.
-
-Text-based lookup does not invent image-recognition confidence. The detail available in each country report depends on the underlying country data.
-
-## How it works
-
-```text
-Flag image → MobileNetV3-Small → prediction / ambiguity decision ─┐
-                                                                ├→ Country profile
-Country name / ISO code → deterministic country resolver ────────┘         ↓
-                                                           AI report generation
-                                                                     ↓
-                                                           Sanitization + QA
-                                                                     ↓
-                                                               PDF / JSON
+```
+Flag image (upload / camera)
+       ↓
+Image validation
+       ↓
+Reference-flag comparison ── confident and distinctive? ── yes → country
+       │ no
+       ↓
+MobileNetV3-Small (250 classes: ISO territories + Kosovo)
+       ↓
+Uncertain? → explicit candidate list and manual confirmation
+       ↓
+REST Countries + World Bank → short country fact sheet
 ```
 
-The recognition model is stored at `artifacts/models/worldwide_mobilenet_v3_small.pt`. Visually similar flags, such as Côte d’Ivoire / Ireland and Chad / Romania, require particular care during prediction.
+- **Reference matching** improves reliability for clean, centered flag pictures;
+  it uses normalized image difference and **does not claim a model confidence**.
+  Templates are retrieved from FlagCDN and cached; connection failures are
+  handled without stopping the application.
+- **MobileNetV3-Small** remains the trained fallback for other inputs. Confidence
+  is uncalibrated for difficult photos, so uncertain predictions are not forced.
+- **Manual correction** is always available when flags look alike or a photo
+  does not allow reliable identification.
+- **Recent data**: geography and capital from REST Countries; the newest
+  non-null **annual** population observation from the World Bank
+  (`SP.POP.TOTL`), including year and source. A REST Countries fallback is
+  clearly marked when no World Bank observation can be fetched.
+- **Quick JSON export** preserves year, source, and retrieval timestamp.
+- **Advanced country reports and conversations** remain in the existing
+  codebase but are intentionally removed from the main user flow.
 
-## Model evaluation
+## What the accuracy results mean
 
-The project tracks classification, calibration, open-set recognition and inference efficiency, including Top-1 / Top-5 accuracy, macro F1, confusion matrices, ECE, AUROC and latency.
+On the human-reviewed **real-world challenge** documented for the original
+classifier, **Top-1 accuracy was 19.61% and Top-5 was 27.45%**. The
+new reference-matching layer has not been evaluated on a new independent
+photo benchmark. It would be misleading to treat clean official-flag tests as
+proof of robust recognition in photos with folds, occlusion, and backgrounds.
 
-**Human-reviewed real-world challenge results:**
+Similar designs include **Côte d'Ivoire / Ireland**, **Chad / Romania**, and
+**Monaco / Indonesia**. Users should confirm uncertain predictions.
 
-| Evaluated system | Top-1 | Top-5 |
-|---|---:|---:|
-| V1 worldwide classifier | 19.61% | 27.45% |
-| Scene-aware V2 | 17.65% | 30.39% |
-| Detector + V1 | 19.61% | 30.39% |
-
-Flag-detector localization rate: **73.53%**. These results show that real-world flag recognition remains challenging; the alternative pipelines were not promoted because they did not improve Top-1 accuracy. The Wikimedia challenge set is reserved for evaluation.
-
-## Get started
-
-**Streamlit application:**
+## Run locally
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-**Tests:**
+To launch the previous report-rich experience instead:
 
 ```bash
-pytest
+FLAG_INTELLIGENCE_MODE=advanced streamlit run app.py
 ```
 
-**Optional FastAPI development server:**
+The Streamlit Community Cloud deployment may use `app.py`,
+`streamlit_app.py`, or `main.py`; all three reach the recognition-first app.
+
+## Tests and source provenance
 
 ```bash
-PYTHONPATH=src uvicorn serve:app --reload
+python -m pytest -q tests/test_flag_first.py
 ```
 
-### Local AI with Ollama (default)
+GitHub Actions includes a dedicated **Flag-first Streamlit smoke test** and
+tests for visually distinct/ambiguous tricolors, population provenance, and
+fallback behavior. Additional older workflows validate the advanced report
+features independently.
 
-The default report-writing backend is **Ollama**, using the local `qwen3:8b` model. Install Ollama first, then start the project using:
+**Data services:** [REST Countries](https://restcountries.com/),
+[World Bank indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api),
+and [FlagCDN](https://flagcdn.com/).
 
-**Windows (PowerShell)**
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts/run_free_local.ps1
-```
-
-**Linux / WSL**
-
-```bash
-chmod +x scripts/run_free_local.sh
-./scripts/run_free_local.sh
-```
-
-The local app is available at `http://localhost:8501`. To change the model, set `FLAG_INTELLIGENCE_OLLAMA_MODEL` (for example, `qwen3:14b` if your machine has enough resources).
-
-**Optional OpenAI backend:** set `FLAG_INTELLIGENCE_LLM_BACKEND=openai` and provide `OPENAI_API_KEY` securely through environment variables or Streamlit secrets. Never commit API keys.
-
-For temporary access to the locally running app from another device, a Cloudflare Quick Tunnel can be used during development:
-
-```bash
-cloudflared tunnel --url http://localhost:8501
-```
-
-## Project layout
-
-```text
-country-flag-recognition/
-├── app.py                    # Streamlit interface
-├── serve.py                  # API development entry point
-├── src/flag_recognition/     # Recognition and country-report modules
-├── artifacts/                # Models, metrics and figures
-├── data/                     # Datasets and reference resources
-├── scripts/                  # Utilities and local startup scripts
-├── configs/                  # Project configuration
-├── tests/                    # Automated checks
-├── requirements.txt
-└── README.md
-```
-
-## Status and limitations
-
-**V0.1.0** provides flag recognition, name/ISO lookup, country reports and PDF/JSON export. The project includes automated checks for report consistency across its 250-class taxonomy. Work continues on harder real-world flag images, ambiguity handling and the consistency of country-specific information. Time-sensitive facts, such as current government officials, should be checked against up-to-date sources.
-
-**Live application:** https://flag-intelligence.streamlit.app/
+Never interpret the last annual population observation as a real-time live
+headcount. The application makes source years visible for this reason.
