@@ -1,16 +1,24 @@
-"""Small, verifiable country fact sheet for the flag-first application."""
+"""Country fact sheets: bundled geography + current World Bank annual population.
+
+The old unauthenticated REST Countries v3.1 endpoints were retired in 2026.
+A local ODbL-licensed reference keeps capital and area available without keys.
+"""
 from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from typing import Any
+from functools import lru_cache
+import json
+from pathlib import Path
 
 import pycountry
 import requests
 
 from .taxonomy import country_name_from_code
 
-REST_COUNTRIES = "https://restcountries.com/v3.1"
+ROOT = Path(__file__).resolve().parents[2]
+REFERENCE_DATA = ROOT / "data/countries_reference_min.json"
+REFERENCE_URL = "https://github.com/mledoze/countries"
 WORLD_BANK = "https://api.worldbank.org/v2"
 WB_POPULATION_INDICATOR = "SP.POP.TOTL"
 
@@ -27,33 +35,23 @@ class CountryFacts:
     population_source_url: str | None
     retrieved_at: str
     flag_url: str | None
+    geography_source: str = REFERENCE_URL
     warning: str | None = None
 
 
-def _fetch_rest_country(code: str) -> dict[str, Any]:
-    """Retrieve one country, accepting array and object response shapes."""
-    headers = {"User-Agent": "FlagIntelligence/0.2 (country facts)"}
-    for url in (
-        f"{REST_COUNTRIES}/alpha/{code}?fields=name,capital,area,population,translations,flags",
-        f"{REST_COUNTRIES}/alpha/{code}",
-    ):
-        try:
-            response = requests.get(url, headers=headers, timeout=7)
-            response.raise_for_status()
-            payload = response.json()
-            if isinstance(payload, list):
-                payload = payload[0] if payload else {}
-            if isinstance(payload, dict) and isinstance(payload.get("name"), dict):
-                return payload
-        except (requests.RequestException, ValueError, IndexError, TypeError):
-            continue
-    return {}
+@lru_cache(maxsize=1)
+def _reference_countries() -> dict:
+    payload = json.loads(REFERENCE_DATA.read_text(encoding="utf-8"))
+    countries = payload.get("countries", {})
+    if not isinstance(countries, dict):
+        raise ValueError("Invalid bundled country reference.")
+    return countries
 
 
 def _latest_world_bank_population(code: str) -> tuple[int, str, str] | None:
-    """Obtain the latest *observed* annual figure, not a simulated live counter."""
-    country = pycountry.countries.get(alpha_2=code.upper())
-    alpha3 = str(country.alpha_3) if country else ("XKX" if code == "xk" else "")
+    """Latest observed annual statistic; never claim a live population."""
+    item = pycountry.countries.get(alpha_2=code.upper())
+    alpha3 = str(item.alpha_3) if item else ("XKX" if code == "xk" else "")
     if not alpha3:
         return None
 
@@ -90,71 +88,52 @@ def _latest_world_bank_population(code: str) -> tuple[int, str, str] | None:
     return None
 
 
-def _friendly_name(data: dict[str, Any], code: str) -> str:
-    translations = data.get("translations") or {}
-    french = (
-        (translations.get("fra") or {}).get("common")
-        if isinstance(translations, dict) else None
-    )
-    names = data.get("name") or {}
-    common = names.get("common") if isinstance(names, dict) else None
-    return str(french or common or country_name_from_code(code))
-
-
 def fetch_country_facts(code: str) -> CountryFacts:
-    """Best-effort country lookup, with explicit provenance/freshness."""
     code = code.strip().lower()
     if len(code) != 2 or not code.isalpha():
         raise ValueError("Country code must be two letters.")
 
-    data = _fetch_rest_country(code)
-    capital = data.get("capital")
-    if isinstance(capital, list):
-        capital = ", ".join(str(item) for item in capital if item)
-    if not isinstance(capital, str) or not capital.strip():
-        capital = None
+    row = _reference_countries().get(code, {})
+    if not isinstance(row, dict):
+        row = {}
+    capital_values = row.get("capital")
+    if isinstance(capital_values, list):
+        capital = ", ".join(str(item) for item in capital_values if item) or None
+    else:
+        capital = str(capital_values) if capital_values else None
 
-    raw_area = data.get("area")
-    area = float(raw_area) if isinstance(raw_area, (int, float)) and raw_area > 0 else None
+    area_value = row.get("area_km2")
+    area = float(area_value) if isinstance(area_value, (int, float)) and area_value > 0 else None
+    name = str(row.get("name_fr") or row.get("name_en") or country_name_from_code(code))
 
-    flag = data.get("flags") or {}
-    flag_url = flag.get("png") if isinstance(flag, dict) else None
-    if not isinstance(flag_url, str) or not flag_url.startswith("https://"):
-        flag_url = f"https://flagcdn.com/w320/{code}.png"
-
-    wb = _latest_world_bank_population(code)
-    if wb:
-        population, year, population_url = wb
+    population_record = _latest_world_bank_population(code)
+    if population_record:
+        population, year, source_url = population_record
         source = "Banque mondiale · SP.POP.TOTL"
         warning = None
     else:
-        raw_pop = data.get("population")
-        population = int(raw_pop) if isinstance(raw_pop, (int, float)) and raw_pop > 0 else None
-        year = None
-        source = "REST Countries (année de référence non fournie)" if population else None
-        population_url = f"{REST_COUNTRIES}/alpha/{code}" if population else None
+        population, year, source, source_url = None, None, None, None
         warning = (
-            "Dernière donnée annuelle de la Banque mondiale indisponible. "
-            "Le chiffre de remplacement n'est pas une population en temps réel."
-            if population else
-            "Population indisponible auprès des sources interrogées."
+            "La dernière population annuelle n'a pas pu être récupérée "
+            "auprès de la Banque mondiale. Aucune valeur périmée n'est inventée."
         )
 
-    if not data:
+    if not row:
         warning = (warning + " " if warning else "") + (
-            "Informations géographiques momentanément indisponibles."
+            "La géographie de ce territoire n'est pas dans la référence locale."
         )
 
     return CountryFacts(
         code=code.upper(),
-        name=_friendly_name(data, code),
+        name=name,
         capital=capital,
         area_km2=area,
         population=population,
         population_year=year,
         population_source=source,
-        population_source_url=population_url,
+        population_source_url=source_url,
         retrieved_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-        flag_url=flag_url,
+        flag_url=f"https://flagcdn.com/w320/{code}.png",
+        geography_source=REFERENCE_URL,
         warning=warning,
     )
