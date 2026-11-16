@@ -1,0 +1,2003 @@
+{
+  "source": "mledoze/countries",
+  "source_url": "https://github.com/mledoze/countries",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "notes": "Offline attribution-preserved geographic reference snapshot; population intentionally excluded because it must use a sourced annual indicator.",
+  "countries": {
+    "aw": {
+      "name_fr": "Aruba",
+      "name_en": "Aruba",
+      "capital": [
+        "Oranjestad"
+      ],
+      "area_km2": 180
+    },
+    "af": {
+      "name_fr": "Afghanistan",
+      "name_en": "Afghanistan",
+      "capital": [
+        "Kabul"
+      ],
+      "area_km2": 652230
+    },
+    "ao": {
+      "name_fr": "Angola",
+      "name_en": "Angola",
+      "capital": [
+        "Luanda"
+      ],
+      "area_km2": 1246700
+    },
+    "ai": {
+      "name_fr": "Anguilla",
+      "name_en": "Anguilla",
+      "capital": [
+        "The Valley"
+      ],
+      "area_km2": 91
+    },
+    "ax": {
+      "name_fr": "Ahvenanmaa",
+      "name_en": "Åland Islands",
+      "capital": [
+        "Mariehamn"
+      ],
+      "area_km2": 1580
+    },
+    "al": {
+      "name_fr": "Albanie",
+      "name_en": "Albania",
+      "capital": [
+        "Tirana"
+      ],
+      "area_km2": 28748
+    },
+    "ad": {
+      "name_fr": "Andorre",
+      "name_en": "Andorra",
+      "capital": [
+        "Andorra la Vella"
+      ],
+      "area_km2": 468
+    },
+    "ae": {
+      "name_fr": "Émirats arabes unis",
+      "name_en": "United Arab Emirates",
+      "capital": [
+        "Abu Dhabi"
+      ],
+      "area_km2": 83600
+    },
+    "ar": {
+      "name_fr": "Argentine",
+      "name_en": "Argentina",
+      "capital": [
+        "Buenos Aires"
+      ],
+      "area_km2": 2780400
+    },
+    "am": {
+      "name_fr": "Arménie",
+      "name_en": "Armenia",
+      "capital": [
+        "Yerevan"
+      ],
+      "area_km2": 29743
+    },
+    "as": {
+      "name_fr": "Samoa américaines",
+      "name_en": "American Samoa",
+      "capital": [
+        "Pago Pago"
+      ],
+      "area_km2": 199
+    },
+    "aq": {
+      "name_fr": "Antarctique",
+      "name_en": "Antarctica",
+      "capital": [],
+      "area_km2": 14000000
+    },
+    "tf": {
+      "name_fr": "Terres australes et antarctiques françaises",
+      "name_en": "French Southern and Antarctic Lands",
+      "capital": [
+        "Port-aux-Français"
+      ],
+      "area_km2": 7747
+    },
+    "ag": {
+      "name_fr": "Antigua-et-Barbuda",
+      "name_en": "Antigua and Barbuda",
+      "capital": [
+        "Saint John's"
+      ],
+      "area_km2": 442
+    },
+    "au": {
+      "name_fr": "Australie",
+      "name_en": "Australia",
+      "capital": [
+        "Canberra"
+      ],
+      "area_km2": 7692024
+    },
+    "at": {
+      "name_fr": "Autriche",
+      "name_en": "Austria",
+      "capital": [
+        "Vienna"
+      ],
+      "area_km2": 83871
+    },
+    "az": {
+      "name_fr": "Azerbaïdjan",
+      "name_en": "Azerbaijan",
+      "capital": [
+        "Baku"
+      ],
+      "area_km2": 86600
+    },
+    "bi": {
+      "name_fr": "Burundi",
+      "name_en": "Burundi",
+      "capital": [
+        "Gitega"
+      ],
+      "area_km2": 27834
+    },
+    "be": {
+      "name_fr": "Belgique",
+      "name_en": "Belgium",
+      "capital": [
+        "Brussels"
+      ],
+      "area_km2": 30528
+    },
+    "bj": {
+      "name_fr": "Bénin",
+      "name_en": "Benin",
+      "capital": [
+        "Porto-Novo"
+      ],
+      "area_km2": 112622
+    },
+    "bf": {
+      "name_fr": "Burkina Faso",
+      "name_en": "Burkina Faso",
+      "capital": [
+        "Ouagadougou"
+      ],
+      "area_km2": 272967
+    },
+    "bd": {
+      "name_fr": "Bangladesh",
+      "name_en": "Bangladesh",
+      "capital": [
+        "Dhaka"
+      ],
+      "area_km2": 147570
+    },
+    "bg": {
+      "name_fr": "Bulgarie",
+      "name_en": "Bulgaria",
+      "capital": [
+        "Sofia"
+      ],
+      "area_km2": 110879
+    },
+    "bh": {
+      "name_fr": "Bahreïn",
+      "name_en": "Bahrain",
+      "capital": [
+        "Manama"
+      ],
+      "area_km2": 765
+    },
+    "bs": {
+      "name_fr": "Bahamas",
+      "name_en": "Bahamas",
+      "capital": [
+        "Nassau"
+      ],
+      "area_km2": 13943
+    },
+    "ba": {
+      "name_fr": "Bosnie-Herzégovine",
+      "name_en": "Bosnia and Herzegovina",
+      "capital": [
+        "Sarajevo"
+      ],
+      "area_km2": 51209
+    },
+    "bl": {
+      "name_fr": "Saint-Barthélemy",
+      "name_en": "Saint Barthélemy",
+      "capital": [
+        "Gustavia"
+      ],
+      "area_km2": 21
+    },
+    "sh": {
+      "name_fr": "Sainte-Hélène, Ascension et Tristan da Cunha",
+      "name_en": "Saint Helena, Ascension and Tristan da Cunha",
+      "capital": [
+        "Jamestown"
+      ],
+      "area_km2": 394
+    },
+    "by": {
+      "name_fr": "Biélorussie",
+      "name_en": "Belarus",
+      "capital": [
+        "Minsk"
+      ],
+      "area_km2": 207600
+    },
+    "bz": {
+      "name_fr": "Belize",
+      "name_en": "Belize",
+      "capital": [
+        "Belmopan"
+      ],
+      "area_km2": 22966
+    },
+    "bm": {
+      "name_fr": "Bermudes",
+      "name_en": "Bermuda",
+      "capital": [
+        "Hamilton"
+      ],
+      "area_km2": 54
+    },
+    "bo": {
+      "name_fr": "Bolivie",
+      "name_en": "Bolivia",
+      "capital": [
+        "Sucre"
+      ],
+      "area_km2": 1098581
+    },
+    "bq": {
+      "name_fr": "Pays-Bas caribéens",
+      "name_en": "Caribbean Netherlands",
+      "capital": [
+        "Kralendijk",
+        "Oranjestad",
+        "The Bottom"
+      ],
+      "area_km2": 328
+    },
+    "br": {
+      "name_fr": "Brésil",
+      "name_en": "Brazil",
+      "capital": [
+        "Brasília"
+      ],
+      "area_km2": 8515767
+    },
+    "bb": {
+      "name_fr": "Barbade",
+      "name_en": "Barbados",
+      "capital": [
+        "Bridgetown"
+      ],
+      "area_km2": 430
+    },
+    "bn": {
+      "name_fr": "Brunei",
+      "name_en": "Brunei",
+      "capital": [
+        "Bandar Seri Begawan"
+      ],
+      "area_km2": 5765
+    },
+    "bt": {
+      "name_fr": "Bhoutan",
+      "name_en": "Bhutan",
+      "capital": [
+        "Thimphu"
+      ],
+      "area_km2": 38394
+    },
+    "bv": {
+      "name_fr": "Île Bouvet",
+      "name_en": "Bouvet Island",
+      "capital": [],
+      "area_km2": 49
+    },
+    "bw": {
+      "name_fr": "Botswana",
+      "name_en": "Botswana",
+      "capital": [
+        "Gaborone"
+      ],
+      "area_km2": 582000
+    },
+    "cf": {
+      "name_fr": "République centrafricaine",
+      "name_en": "Central African Republic",
+      "capital": [
+        "Bangui"
+      ],
+      "area_km2": 622984
+    },
+    "ca": {
+      "name_fr": "Canada",
+      "name_en": "Canada",
+      "capital": [
+        "Ottawa"
+      ],
+      "area_km2": 9984670
+    },
+    "cc": {
+      "name_fr": "Îles Cocos",
+      "name_en": "Cocos (Keeling) Islands",
+      "capital": [
+        "West Island"
+      ],
+      "area_km2": 14
+    },
+    "ch": {
+      "name_fr": "Suisse",
+      "name_en": "Switzerland",
+      "capital": [
+        "Bern"
+      ],
+      "area_km2": 41284
+    },
+    "cl": {
+      "name_fr": "Chili",
+      "name_en": "Chile",
+      "capital": [
+        "Santiago"
+      ],
+      "area_km2": 756102
+    },
+    "cn": {
+      "name_fr": "Chine",
+      "name_en": "China",
+      "capital": [
+        "Beijing"
+      ],
+      "area_km2": 9706961
+    },
+    "ci": {
+      "name_fr": "Côte d'Ivoire",
+      "name_en": "Ivory Coast",
+      "capital": [
+        "Yamoussoukro"
+      ],
+      "area_km2": 322463
+    },
+    "cm": {
+      "name_fr": "Cameroun",
+      "name_en": "Cameroon",
+      "capital": [
+        "Yaoundé"
+      ],
+      "area_km2": 475442
+    },
+    "cd": {
+      "name_fr": "Congo (Rép. dém.)",
+      "name_en": "DR Congo",
+      "capital": [
+        "Kinshasa"
+      ],
+      "area_km2": 2344858
+    },
+    "cg": {
+      "name_fr": "Congo",
+      "name_en": "Congo",
+      "capital": [
+        "Brazzaville"
+      ],
+      "area_km2": 342000
+    },
+    "ck": {
+      "name_fr": "Îles Cook",
+      "name_en": "Cook Islands",
+      "capital": [
+        "Avarua"
+      ],
+      "area_km2": 236
+    },
+    "co": {
+      "name_fr": "Colombie",
+      "name_en": "Colombia",
+      "capital": [
+        "Bogotá"
+      ],
+      "area_km2": 1141748
+    },
+    "km": {
+      "name_fr": "Comores",
+      "name_en": "Comoros",
+      "capital": [
+        "Moroni"
+      ],
+      "area_km2": 1862
+    },
+    "cv": {
+      "name_fr": "Îles du Cap-Vert",
+      "name_en": "Cape Verde",
+      "capital": [
+        "Praia"
+      ],
+      "area_km2": 4033
+    },
+    "cr": {
+      "name_fr": "Costa Rica",
+      "name_en": "Costa Rica",
+      "capital": [
+        "San José"
+      ],
+      "area_km2": 51100
+    },
+    "cu": {
+      "name_fr": "Cuba",
+      "name_en": "Cuba",
+      "capital": [
+        "Havana"
+      ],
+      "area_km2": 109884
+    },
+    "cw": {
+      "name_fr": "Curaçao",
+      "name_en": "Curaçao",
+      "capital": [
+        "Willemstad"
+      ],
+      "area_km2": 444
+    },
+    "cx": {
+      "name_fr": "Île Christmas",
+      "name_en": "Christmas Island",
+      "capital": [
+        "Flying Fish Cove"
+      ],
+      "area_km2": 135
+    },
+    "ky": {
+      "name_fr": "Îles Caïmans",
+      "name_en": "Cayman Islands",
+      "capital": [
+        "George Town"
+      ],
+      "area_km2": 264
+    },
+    "cy": {
+      "name_fr": "Chypre",
+      "name_en": "Cyprus",
+      "capital": [
+        "Nicosia"
+      ],
+      "area_km2": 9251
+    },
+    "cz": {
+      "name_fr": "Tchéquie",
+      "name_en": "Czechia",
+      "capital": [
+        "Prague"
+      ],
+      "area_km2": 78865
+    },
+    "de": {
+      "name_fr": "Allemagne",
+      "name_en": "Germany",
+      "capital": [
+        "Berlin"
+      ],
+      "area_km2": 357114
+    },
+    "dj": {
+      "name_fr": "Djibouti",
+      "name_en": "Djibouti",
+      "capital": [
+        "Djibouti"
+      ],
+      "area_km2": 23200
+    },
+    "dm": {
+      "name_fr": "Dominique",
+      "name_en": "Dominica",
+      "capital": [
+        "Roseau"
+      ],
+      "area_km2": 751
+    },
+    "dk": {
+      "name_fr": "Danemark",
+      "name_en": "Denmark",
+      "capital": [
+        "Copenhagen"
+      ],
+      "area_km2": 43094
+    },
+    "do": {
+      "name_fr": "République dominicaine",
+      "name_en": "Dominican Republic",
+      "capital": [
+        "Santo Domingo"
+      ],
+      "area_km2": 48671
+    },
+    "dz": {
+      "name_fr": "Algérie",
+      "name_en": "Algeria",
+      "capital": [
+        "Algiers"
+      ],
+      "area_km2": 2381741
+    },
+    "ec": {
+      "name_fr": "Équateur",
+      "name_en": "Ecuador",
+      "capital": [
+        "Quito"
+      ],
+      "area_km2": 276841
+    },
+    "eg": {
+      "name_fr": "Égypte",
+      "name_en": "Egypt",
+      "capital": [
+        "Cairo"
+      ],
+      "area_km2": 1002450
+    },
+    "er": {
+      "name_fr": "Érythrée",
+      "name_en": "Eritrea",
+      "capital": [
+        "Asmara"
+      ],
+      "area_km2": 117600
+    },
+    "eh": {
+      "name_fr": "Sahara Occidental",
+      "name_en": "Western Sahara",
+      "capital": [
+        "El Aaiún"
+      ],
+      "area_km2": 266000
+    },
+    "es": {
+      "name_fr": "Espagne",
+      "name_en": "Spain",
+      "capital": [
+        "Madrid"
+      ],
+      "area_km2": 505992
+    },
+    "ee": {
+      "name_fr": "Estonie",
+      "name_en": "Estonia",
+      "capital": [
+        "Tallinn"
+      ],
+      "area_km2": 45227
+    },
+    "et": {
+      "name_fr": "Éthiopie",
+      "name_en": "Ethiopia",
+      "capital": [
+        "Addis Ababa"
+      ],
+      "area_km2": 1104300
+    },
+    "fi": {
+      "name_fr": "Finlande",
+      "name_en": "Finland",
+      "capital": [
+        "Helsinki"
+      ],
+      "area_km2": 338424
+    },
+    "fj": {
+      "name_fr": "Fidji",
+      "name_en": "Fiji",
+      "capital": [
+        "Suva"
+      ],
+      "area_km2": 18272
+    },
+    "fk": {
+      "name_fr": "Îles Malouines",
+      "name_en": "Falkland Islands",
+      "capital": [
+        "Stanley"
+      ],
+      "area_km2": 12173
+    },
+    "fr": {
+      "name_fr": "France",
+      "name_en": "France",
+      "capital": [
+        "Paris"
+      ],
+      "area_km2": 551695
+    },
+    "fo": {
+      "name_fr": "Îles Féroé",
+      "name_en": "Faroe Islands",
+      "capital": [
+        "Tórshavn"
+      ],
+      "area_km2": 1393
+    },
+    "fm": {
+      "name_fr": "Micronésie",
+      "name_en": "Micronesia",
+      "capital": [
+        "Palikir"
+      ],
+      "area_km2": 702
+    },
+    "ga": {
+      "name_fr": "Gabon",
+      "name_en": "Gabon",
+      "capital": [
+        "Libreville"
+      ],
+      "area_km2": 267668
+    },
+    "gb": {
+      "name_fr": "Royaume-Uni",
+      "name_en": "United Kingdom",
+      "capital": [
+        "London"
+      ],
+      "area_km2": 242900
+    },
+    "ge": {
+      "name_fr": "Géorgie",
+      "name_en": "Georgia",
+      "capital": [
+        "Tbilisi"
+      ],
+      "area_km2": 69700
+    },
+    "gg": {
+      "name_fr": "Guernesey",
+      "name_en": "Guernsey",
+      "capital": [
+        "St. Peter Port"
+      ],
+      "area_km2": 78
+    },
+    "gh": {
+      "name_fr": "Ghana",
+      "name_en": "Ghana",
+      "capital": [
+        "Accra"
+      ],
+      "area_km2": 238533
+    },
+    "gi": {
+      "name_fr": "Gibraltar",
+      "name_en": "Gibraltar",
+      "capital": [
+        "Gibraltar"
+      ],
+      "area_km2": 6
+    },
+    "gn": {
+      "name_fr": "Guinée",
+      "name_en": "Guinea",
+      "capital": [
+        "Conakry"
+      ],
+      "area_km2": 245857
+    },
+    "gp": {
+      "name_fr": "Guadeloupe",
+      "name_en": "Guadeloupe",
+      "capital": [
+        "Basse-Terre"
+      ],
+      "area_km2": 1628
+    },
+    "gm": {
+      "name_fr": "Gambie",
+      "name_en": "Gambia",
+      "capital": [
+        "Banjul"
+      ],
+      "area_km2": 10689
+    },
+    "gw": {
+      "name_fr": "Guinée-Bissau",
+      "name_en": "Guinea-Bissau",
+      "capital": [
+        "Bissau"
+      ],
+      "area_km2": 36125
+    },
+    "gq": {
+      "name_fr": "Guinée équatoriale",
+      "name_en": "Equatorial Guinea",
+      "capital": [
+        "Malabo"
+      ],
+      "area_km2": 28051
+    },
+    "gr": {
+      "name_fr": "Grèce",
+      "name_en": "Greece",
+      "capital": [
+        "Athens"
+      ],
+      "area_km2": 131990
+    },
+    "gd": {
+      "name_fr": "Grenade",
+      "name_en": "Grenada",
+      "capital": [
+        "St. George's"
+      ],
+      "area_km2": 344
+    },
+    "gl": {
+      "name_fr": "Groenland",
+      "name_en": "Greenland",
+      "capital": [
+        "Nuuk"
+      ],
+      "area_km2": 2166086
+    },
+    "gt": {
+      "name_fr": "Guatemala",
+      "name_en": "Guatemala",
+      "capital": [
+        "Guatemala City"
+      ],
+      "area_km2": 108889
+    },
+    "gf": {
+      "name_fr": "Guyane",
+      "name_en": "French Guiana",
+      "capital": [
+        "Cayenne"
+      ],
+      "area_km2": 83534
+    },
+    "gu": {
+      "name_fr": "Guam",
+      "name_en": "Guam",
+      "capital": [
+        "Hagåtña"
+      ],
+      "area_km2": 549
+    },
+    "gy": {
+      "name_fr": "Guyana",
+      "name_en": "Guyana",
+      "capital": [
+        "Georgetown"
+      ],
+      "area_km2": 214969
+    },
+    "hk": {
+      "name_fr": "Hong Kong",
+      "name_en": "Hong Kong",
+      "capital": [
+        "City of Victoria"
+      ],
+      "area_km2": 1104
+    },
+    "hm": {
+      "name_fr": "Îles Heard-et-MacDonald",
+      "name_en": "Heard Island and McDonald Islands",
+      "capital": [],
+      "area_km2": 412
+    },
+    "hn": {
+      "name_fr": "Honduras",
+      "name_en": "Honduras",
+      "capital": [
+        "Tegucigalpa"
+      ],
+      "area_km2": 112492
+    },
+    "hr": {
+      "name_fr": "Croatie",
+      "name_en": "Croatia",
+      "capital": [
+        "Zagreb"
+      ],
+      "area_km2": 56594
+    },
+    "ht": {
+      "name_fr": "Haïti",
+      "name_en": "Haiti",
+      "capital": [
+        "Port-au-Prince"
+      ],
+      "area_km2": 27750
+    },
+    "hu": {
+      "name_fr": "Hongrie",
+      "name_en": "Hungary",
+      "capital": [
+        "Budapest"
+      ],
+      "area_km2": 93028
+    },
+    "id": {
+      "name_fr": "Indonésie",
+      "name_en": "Indonesia",
+      "capital": [
+        "Jakarta"
+      ],
+      "area_km2": 1904569
+    },
+    "im": {
+      "name_fr": "Île de Man",
+      "name_en": "Isle of Man",
+      "capital": [
+        "Douglas"
+      ],
+      "area_km2": 572
+    },
+    "in": {
+      "name_fr": "Inde",
+      "name_en": "India",
+      "capital": [
+        "New Delhi"
+      ],
+      "area_km2": 3287590
+    },
+    "io": {
+      "name_fr": "Territoire britannique de l'océan Indien",
+      "name_en": "British Indian Ocean Territory",
+      "capital": [
+        "Diego Garcia"
+      ],
+      "area_km2": 60
+    },
+    "ie": {
+      "name_fr": "Irlande",
+      "name_en": "Ireland",
+      "capital": [
+        "Dublin"
+      ],
+      "area_km2": 70273
+    },
+    "ir": {
+      "name_fr": "Iran",
+      "name_en": "Iran",
+      "capital": [
+        "Tehran"
+      ],
+      "area_km2": 1648195
+    },
+    "iq": {
+      "name_fr": "Irak",
+      "name_en": "Iraq",
+      "capital": [
+        "Baghdad"
+      ],
+      "area_km2": 438317
+    },
+    "is": {
+      "name_fr": "Islande",
+      "name_en": "Iceland",
+      "capital": [
+        "Reykjavik"
+      ],
+      "area_km2": 103000
+    },
+    "il": {
+      "name_fr": "Israël",
+      "name_en": "Israel",
+      "capital": [
+        "Jerusalem"
+      ],
+      "area_km2": 20770
+    },
+    "it": {
+      "name_fr": "Italie",
+      "name_en": "Italy",
+      "capital": [
+        "Rome"
+      ],
+      "area_km2": 301336
+    },
+    "jm": {
+      "name_fr": "Jamaïque",
+      "name_en": "Jamaica",
+      "capital": [
+        "Kingston"
+      ],
+      "area_km2": 10991
+    },
+    "je": {
+      "name_fr": "Jersey",
+      "name_en": "Jersey",
+      "capital": [
+        "Saint Helier"
+      ],
+      "area_km2": 116
+    },
+    "jo": {
+      "name_fr": "Jordanie",
+      "name_en": "Jordan",
+      "capital": [
+        "Amman"
+      ],
+      "area_km2": 89342
+    },
+    "jp": {
+      "name_fr": "Japon",
+      "name_en": "Japan",
+      "capital": [
+        "Tokyo"
+      ],
+      "area_km2": 377930
+    },
+    "kz": {
+      "name_fr": "Kazakhstan",
+      "name_en": "Kazakhstan",
+      "capital": [
+        "Astana"
+      ],
+      "area_km2": 2724900
+    },
+    "ke": {
+      "name_fr": "Kenya",
+      "name_en": "Kenya",
+      "capital": [
+        "Nairobi"
+      ],
+      "area_km2": 580367
+    },
+    "kg": {
+      "name_fr": "Kirghizistan",
+      "name_en": "Kyrgyzstan",
+      "capital": [
+        "Bishkek"
+      ],
+      "area_km2": 199951
+    },
+    "kh": {
+      "name_fr": "Cambodge",
+      "name_en": "Cambodia",
+      "capital": [
+        "Phnom Penh"
+      ],
+      "area_km2": 181035
+    },
+    "ki": {
+      "name_fr": "Kiribati",
+      "name_en": "Kiribati",
+      "capital": [
+        "South Tarawa"
+      ],
+      "area_km2": 811
+    },
+    "kn": {
+      "name_fr": "Saint-Christophe-et-Niévès",
+      "name_en": "Saint Kitts and Nevis",
+      "capital": [
+        "Basseterre"
+      ],
+      "area_km2": 261
+    },
+    "kr": {
+      "name_fr": "Corée du Sud",
+      "name_en": "South Korea",
+      "capital": [
+        "Seoul"
+      ],
+      "area_km2": 100210
+    },
+    "xk": {
+      "name_fr": "Kosovo",
+      "name_en": "Kosovo",
+      "capital": [
+        "Pristina"
+      ],
+      "area_km2": 10908
+    },
+    "kw": {
+      "name_fr": "Koweït",
+      "name_en": "Kuwait",
+      "capital": [
+        "Kuwait City"
+      ],
+      "area_km2": 17818
+    },
+    "la": {
+      "name_fr": "Laos",
+      "name_en": "Laos",
+      "capital": [
+        "Vientiane"
+      ],
+      "area_km2": 236800
+    },
+    "lb": {
+      "name_fr": "Liban",
+      "name_en": "Lebanon",
+      "capital": [
+        "Beirut"
+      ],
+      "area_km2": 10452
+    },
+    "lr": {
+      "name_fr": "Liberia",
+      "name_en": "Liberia",
+      "capital": [
+        "Monrovia"
+      ],
+      "area_km2": 111369
+    },
+    "ly": {
+      "name_fr": "Libye",
+      "name_en": "Libya",
+      "capital": [
+        "Tripoli"
+      ],
+      "area_km2": 1759540
+    },
+    "lc": {
+      "name_fr": "Sainte-Lucie",
+      "name_en": "Saint Lucia",
+      "capital": [
+        "Castries"
+      ],
+      "area_km2": 616
+    },
+    "li": {
+      "name_fr": "Liechtenstein",
+      "name_en": "Liechtenstein",
+      "capital": [
+        "Vaduz"
+      ],
+      "area_km2": 160
+    },
+    "lk": {
+      "name_fr": "Sri Lanka",
+      "name_en": "Sri Lanka",
+      "capital": [
+        "Colombo"
+      ],
+      "area_km2": 65610
+    },
+    "ls": {
+      "name_fr": "Lesotho",
+      "name_en": "Lesotho",
+      "capital": [
+        "Maseru"
+      ],
+      "area_km2": 30355
+    },
+    "lt": {
+      "name_fr": "Lituanie",
+      "name_en": "Lithuania",
+      "capital": [
+        "Vilnius"
+      ],
+      "area_km2": 65300
+    },
+    "lu": {
+      "name_fr": "Luxembourg",
+      "name_en": "Luxembourg",
+      "capital": [
+        "Luxembourg"
+      ],
+      "area_km2": 2586
+    },
+    "lv": {
+      "name_fr": "Lettonie",
+      "name_en": "Latvia",
+      "capital": [
+        "Riga"
+      ],
+      "area_km2": 64559
+    },
+    "mo": {
+      "name_fr": "Macao",
+      "name_en": "Macau",
+      "capital": [],
+      "area_km2": 30
+    },
+    "mf": {
+      "name_fr": "Saint-Martin",
+      "name_en": "Saint Martin",
+      "capital": [
+        "Marigot"
+      ],
+      "area_km2": 53
+    },
+    "ma": {
+      "name_fr": "Maroc",
+      "name_en": "Morocco",
+      "capital": [
+        "Rabat"
+      ],
+      "area_km2": 446550
+    },
+    "mc": {
+      "name_fr": "Monaco",
+      "name_en": "Monaco",
+      "capital": [
+        "Monaco"
+      ],
+      "area_km2": 2.02
+    },
+    "md": {
+      "name_fr": "Moldavie",
+      "name_en": "Moldova",
+      "capital": [
+        "Chișinău"
+      ],
+      "area_km2": 33846
+    },
+    "mg": {
+      "name_fr": "Madagascar",
+      "name_en": "Madagascar",
+      "capital": [
+        "Antananarivo"
+      ],
+      "area_km2": 587041
+    },
+    "mv": {
+      "name_fr": "Maldives",
+      "name_en": "Maldives",
+      "capital": [
+        "Malé"
+      ],
+      "area_km2": 300
+    },
+    "mx": {
+      "name_fr": "Mexique",
+      "name_en": "Mexico",
+      "capital": [
+        "Mexico City"
+      ],
+      "area_km2": 1964375
+    },
+    "mh": {
+      "name_fr": "Îles Marshall",
+      "name_en": "Marshall Islands",
+      "capital": [
+        "Majuro"
+      ],
+      "area_km2": 181
+    },
+    "mk": {
+      "name_fr": "Macédoine du Nord",
+      "name_en": "North Macedonia",
+      "capital": [
+        "Skopje"
+      ],
+      "area_km2": 25713
+    },
+    "ml": {
+      "name_fr": "Mali",
+      "name_en": "Mali",
+      "capital": [
+        "Bamako"
+      ],
+      "area_km2": 1240192
+    },
+    "mt": {
+      "name_fr": "Malte",
+      "name_en": "Malta",
+      "capital": [
+        "Valletta"
+      ],
+      "area_km2": 316
+    },
+    "mm": {
+      "name_fr": "Birmanie",
+      "name_en": "Myanmar",
+      "capital": [
+        "Naypyidaw"
+      ],
+      "area_km2": 676578
+    },
+    "me": {
+      "name_fr": "Monténégro",
+      "name_en": "Montenegro",
+      "capital": [
+        "Podgorica"
+      ],
+      "area_km2": 13812
+    },
+    "mn": {
+      "name_fr": "Mongolie",
+      "name_en": "Mongolia",
+      "capital": [
+        "Ulan Bator"
+      ],
+      "area_km2": 1564110
+    },
+    "mp": {
+      "name_fr": "Îles Mariannes du Nord",
+      "name_en": "Northern Mariana Islands",
+      "capital": [
+        "Saipan"
+      ],
+      "area_km2": 464
+    },
+    "mz": {
+      "name_fr": "Mozambique",
+      "name_en": "Mozambique",
+      "capital": [
+        "Maputo"
+      ],
+      "area_km2": 801590
+    },
+    "mr": {
+      "name_fr": "Mauritanie",
+      "name_en": "Mauritania",
+      "capital": [
+        "Nouakchott"
+      ],
+      "area_km2": 1030700
+    },
+    "ms": {
+      "name_fr": "Montserrat",
+      "name_en": "Montserrat",
+      "capital": [
+        "Plymouth"
+      ],
+      "area_km2": 102
+    },
+    "mq": {
+      "name_fr": "Martinique",
+      "name_en": "Martinique",
+      "capital": [
+        "Fort-de-France"
+      ],
+      "area_km2": 1128
+    },
+    "mu": {
+      "name_fr": "Île Maurice",
+      "name_en": "Mauritius",
+      "capital": [
+        "Port Louis"
+      ],
+      "area_km2": 2040
+    },
+    "mw": {
+      "name_fr": "Malawi",
+      "name_en": "Malawi",
+      "capital": [
+        "Lilongwe"
+      ],
+      "area_km2": 118484
+    },
+    "my": {
+      "name_fr": "Malaisie",
+      "name_en": "Malaysia",
+      "capital": [
+        "Kuala Lumpur"
+      ],
+      "area_km2": 330803
+    },
+    "yt": {
+      "name_fr": "Mayotte",
+      "name_en": "Mayotte",
+      "capital": [
+        "Mamoudzou"
+      ],
+      "area_km2": 374
+    },
+    "na": {
+      "name_fr": "Namibie",
+      "name_en": "Namibia",
+      "capital": [
+        "Windhoek"
+      ],
+      "area_km2": 825615
+    },
+    "nc": {
+      "name_fr": "Nouvelle-Calédonie",
+      "name_en": "New Caledonia",
+      "capital": [
+        "Nouméa"
+      ],
+      "area_km2": 18575
+    },
+    "ne": {
+      "name_fr": "Niger",
+      "name_en": "Niger",
+      "capital": [
+        "Niamey"
+      ],
+      "area_km2": 1267000
+    },
+    "nf": {
+      "name_fr": "Île Norfolk",
+      "name_en": "Norfolk Island",
+      "capital": [
+        "Kingston"
+      ],
+      "area_km2": 36
+    },
+    "ng": {
+      "name_fr": "Nigéria",
+      "name_en": "Nigeria",
+      "capital": [
+        "Abuja"
+      ],
+      "area_km2": 923768
+    },
+    "ni": {
+      "name_fr": "Nicaragua",
+      "name_en": "Nicaragua",
+      "capital": [
+        "Managua"
+      ],
+      "area_km2": 130373
+    },
+    "nu": {
+      "name_fr": "Niue",
+      "name_en": "Niue",
+      "capital": [
+        "Alofi"
+      ],
+      "area_km2": 260
+    },
+    "nl": {
+      "name_fr": "Pays-Bas",
+      "name_en": "Netherlands",
+      "capital": [
+        "Amsterdam"
+      ],
+      "area_km2": 41850
+    },
+    "no": {
+      "name_fr": "Norvège",
+      "name_en": "Norway",
+      "capital": [
+        "Oslo"
+      ],
+      "area_km2": 323802
+    },
+    "np": {
+      "name_fr": "Népal",
+      "name_en": "Nepal",
+      "capital": [
+        "Kathmandu"
+      ],
+      "area_km2": 147181
+    },
+    "nr": {
+      "name_fr": "Nauru",
+      "name_en": "Nauru",
+      "capital": [
+        "Yaren"
+      ],
+      "area_km2": 21
+    },
+    "nz": {
+      "name_fr": "Nouvelle-Zélande",
+      "name_en": "New Zealand",
+      "capital": [
+        "Wellington"
+      ],
+      "area_km2": 270467
+    },
+    "om": {
+      "name_fr": "Oman",
+      "name_en": "Oman",
+      "capital": [
+        "Muscat"
+      ],
+      "area_km2": 309500
+    },
+    "pk": {
+      "name_fr": "Pakistan",
+      "name_en": "Pakistan",
+      "capital": [
+        "Islamabad"
+      ],
+      "area_km2": 881912
+    },
+    "pa": {
+      "name_fr": "Panama",
+      "name_en": "Panama",
+      "capital": [
+        "Panama City"
+      ],
+      "area_km2": 75417
+    },
+    "pn": {
+      "name_fr": "Îles Pitcairn",
+      "name_en": "Pitcairn Islands",
+      "capital": [
+        "Adamstown"
+      ],
+      "area_km2": 47
+    },
+    "pe": {
+      "name_fr": "Pérou",
+      "name_en": "Peru",
+      "capital": [
+        "Lima"
+      ],
+      "area_km2": 1285216
+    },
+    "ph": {
+      "name_fr": "Philippines",
+      "name_en": "Philippines",
+      "capital": [
+        "Manila"
+      ],
+      "area_km2": 342353
+    },
+    "pw": {
+      "name_fr": "Palaos (Palau)",
+      "name_en": "Palau",
+      "capital": [
+        "Ngerulmud"
+      ],
+      "area_km2": 459
+    },
+    "pg": {
+      "name_fr": "Papouasie-Nouvelle-Guinée",
+      "name_en": "Papua New Guinea",
+      "capital": [
+        "Port Moresby"
+      ],
+      "area_km2": 462840
+    },
+    "pl": {
+      "name_fr": "Pologne",
+      "name_en": "Poland",
+      "capital": [
+        "Warsaw"
+      ],
+      "area_km2": 312679
+    },
+    "pr": {
+      "name_fr": "Porto Rico",
+      "name_en": "Puerto Rico",
+      "capital": [
+        "San Juan"
+      ],
+      "area_km2": 8870
+    },
+    "kp": {
+      "name_fr": "Corée du Nord",
+      "name_en": "North Korea",
+      "capital": [
+        "Pyongyang"
+      ],
+      "area_km2": 120538
+    },
+    "pt": {
+      "name_fr": "Portugal",
+      "name_en": "Portugal",
+      "capital": [
+        "Lisbon"
+      ],
+      "area_km2": 92090
+    },
+    "py": {
+      "name_fr": "Paraguay",
+      "name_en": "Paraguay",
+      "capital": [
+        "Asunción"
+      ],
+      "area_km2": 406752
+    },
+    "ps": {
+      "name_fr": "Palestine",
+      "name_en": "Palestine",
+      "capital": [
+        "Ramallah"
+      ],
+      "area_km2": 6220
+    },
+    "pf": {
+      "name_fr": "Polynésie française",
+      "name_en": "French Polynesia",
+      "capital": [
+        "Papeetē"
+      ],
+      "area_km2": 4167
+    },
+    "qa": {
+      "name_fr": "Qatar",
+      "name_en": "Qatar",
+      "capital": [
+        "Doha"
+      ],
+      "area_km2": 11586
+    },
+    "re": {
+      "name_fr": "Réunion",
+      "name_en": "Réunion",
+      "capital": [
+        "Saint-Denis"
+      ],
+      "area_km2": 2511
+    },
+    "ro": {
+      "name_fr": "Roumanie",
+      "name_en": "Romania",
+      "capital": [
+        "Bucharest"
+      ],
+      "area_km2": 238391
+    },
+    "ru": {
+      "name_fr": "Russie",
+      "name_en": "Russia",
+      "capital": [
+        "Moscow"
+      ],
+      "area_km2": 17098242
+    },
+    "rw": {
+      "name_fr": "Rwanda",
+      "name_en": "Rwanda",
+      "capital": [
+        "Kigali"
+      ],
+      "area_km2": 26338
+    },
+    "sa": {
+      "name_fr": "Arabie Saoudite",
+      "name_en": "Saudi Arabia",
+      "capital": [
+        "Riyadh"
+      ],
+      "area_km2": 2149690
+    },
+    "sd": {
+      "name_fr": "Soudan",
+      "name_en": "Sudan",
+      "capital": [
+        "Khartoum"
+      ],
+      "area_km2": 1886068
+    },
+    "sn": {
+      "name_fr": "Sénégal",
+      "name_en": "Senegal",
+      "capital": [
+        "Dakar"
+      ],
+      "area_km2": 196722
+    },
+    "sg": {
+      "name_fr": "Singapour",
+      "name_en": "Singapore",
+      "capital": [
+        "Singapore"
+      ],
+      "area_km2": 710
+    },
+    "gs": {
+      "name_fr": "Géorgie du Sud-et-les Îles Sandwich du Sud",
+      "name_en": "South Georgia",
+      "capital": [
+        "King Edward Point"
+      ],
+      "area_km2": 3903
+    },
+    "sj": {
+      "name_fr": "Svalbard et Jan Mayen",
+      "name_en": "Svalbard and Jan Mayen",
+      "capital": [
+        "Longyearbyen"
+      ],
+      "area_km2": -1
+    },
+    "sb": {
+      "name_fr": "Îles Salomon",
+      "name_en": "Solomon Islands",
+      "capital": [
+        "Honiara"
+      ],
+      "area_km2": 28896
+    },
+    "sl": {
+      "name_fr": "Sierra Leone",
+      "name_en": "Sierra Leone",
+      "capital": [
+        "Freetown"
+      ],
+      "area_km2": 71740
+    },
+    "sv": {
+      "name_fr": "Salvador",
+      "name_en": "El Salvador",
+      "capital": [
+        "San Salvador"
+      ],
+      "area_km2": 21041
+    },
+    "sm": {
+      "name_fr": "Saint-Marin",
+      "name_en": "San Marino",
+      "capital": [
+        "City of San Marino"
+      ],
+      "area_km2": 61
+    },
+    "so": {
+      "name_fr": "Somalie",
+      "name_en": "Somalia",
+      "capital": [
+        "Mogadishu"
+      ],
+      "area_km2": 637657
+    },
+    "pm": {
+      "name_fr": "Saint-Pierre-et-Miquelon",
+      "name_en": "Saint Pierre and Miquelon",
+      "capital": [
+        "Saint-Pierre"
+      ],
+      "area_km2": 242
+    },
+    "rs": {
+      "name_fr": "Serbie",
+      "name_en": "Serbia",
+      "capital": [
+        "Belgrade"
+      ],
+      "area_km2": 88361
+    },
+    "ss": {
+      "name_fr": "Soudan du Sud",
+      "name_en": "South Sudan",
+      "capital": [
+        "Juba"
+      ],
+      "area_km2": 619745
+    },
+    "st": {
+      "name_fr": "São Tomé et Príncipe",
+      "name_en": "São Tomé and Príncipe",
+      "capital": [
+        "São Tomé"
+      ],
+      "area_km2": 964
+    },
+    "sr": {
+      "name_fr": "Surinam",
+      "name_en": "Suriname",
+      "capital": [
+        "Paramaribo"
+      ],
+      "area_km2": 163820
+    },
+    "sk": {
+      "name_fr": "Slovaquie",
+      "name_en": "Slovakia",
+      "capital": [
+        "Bratislava"
+      ],
+      "area_km2": 49037
+    },
+    "si": {
+      "name_fr": "Slovénie",
+      "name_en": "Slovenia",
+      "capital": [
+        "Ljubljana"
+      ],
+      "area_km2": 20273
+    },
+    "se": {
+      "name_fr": "Suède",
+      "name_en": "Sweden",
+      "capital": [
+        "Stockholm"
+      ],
+      "area_km2": 450295
+    },
+    "sz": {
+      "name_fr": "Eswatini",
+      "name_en": "Eswatini",
+      "capital": [
+        "Lobamba"
+      ],
+      "area_km2": 17364
+    },
+    "sx": {
+      "name_fr": "Saint-Martin",
+      "name_en": "Sint Maarten",
+      "capital": [
+        "Philipsburg"
+      ],
+      "area_km2": 34
+    },
+    "sc": {
+      "name_fr": "Seychelles",
+      "name_en": "Seychelles",
+      "capital": [
+        "Victoria"
+      ],
+      "area_km2": 452
+    },
+    "sy": {
+      "name_fr": "Syrie",
+      "name_en": "Syria",
+      "capital": [
+        "Damascus"
+      ],
+      "area_km2": 185180
+    },
+    "tc": {
+      "name_fr": "Îles Turques-et-Caïques",
+      "name_en": "Turks and Caicos Islands",
+      "capital": [
+        "Cockburn Town"
+      ],
+      "area_km2": 948
+    },
+    "td": {
+      "name_fr": "Tchad",
+      "name_en": "Chad",
+      "capital": [
+        "N'Djamena"
+      ],
+      "area_km2": 1284000
+    },
+    "tg": {
+      "name_fr": "Togo",
+      "name_en": "Togo",
+      "capital": [
+        "Lomé"
+      ],
+      "area_km2": 56785
+    },
+    "th": {
+      "name_fr": "Thaïlande",
+      "name_en": "Thailand",
+      "capital": [
+        "Bangkok"
+      ],
+      "area_km2": 513120
+    },
+    "tj": {
+      "name_fr": "Tadjikistan",
+      "name_en": "Tajikistan",
+      "capital": [
+        "Dushanbe"
+      ],
+      "area_km2": 143100
+    },
+    "tk": {
+      "name_fr": "Tokelau",
+      "name_en": "Tokelau",
+      "capital": [
+        "Fakaofo"
+      ],
+      "area_km2": 12
+    },
+    "tm": {
+      "name_fr": "Turkménistan",
+      "name_en": "Turkmenistan",
+      "capital": [
+        "Ashgabat"
+      ],
+      "area_km2": 488100
+    },
+    "tl": {
+      "name_fr": "Timor oriental",
+      "name_en": "Timor-Leste",
+      "capital": [
+        "Dili"
+      ],
+      "area_km2": 14874
+    },
+    "to": {
+      "name_fr": "Tonga",
+      "name_en": "Tonga",
+      "capital": [
+        "Nuku'alofa"
+      ],
+      "area_km2": 747
+    },
+    "tt": {
+      "name_fr": "Trinité-et-Tobago",
+      "name_en": "Trinidad and Tobago",
+      "capital": [
+        "Port of Spain"
+      ],
+      "area_km2": 5130
+    },
+    "tn": {
+      "name_fr": "Tunisie",
+      "name_en": "Tunisia",
+      "capital": [
+        "Tunis"
+      ],
+      "area_km2": 163610
+    },
+    "tr": {
+      "name_fr": "Turquie",
+      "name_en": "Türkiye",
+      "capital": [
+        "Ankara"
+      ],
+      "area_km2": 783562
+    },
+    "tv": {
+      "name_fr": "Tuvalu",
+      "name_en": "Tuvalu",
+      "capital": [
+        "Funafuti"
+      ],
+      "area_km2": 26
+    },
+    "tw": {
+      "name_fr": "Taïwan",
+      "name_en": "Taiwan",
+      "capital": [
+        "Taipei"
+      ],
+      "area_km2": 36193
+    },
+    "tz": {
+      "name_fr": "Tanzanie",
+      "name_en": "Tanzania",
+      "capital": [
+        "Dodoma"
+      ],
+      "area_km2": 945087
+    },
+    "ug": {
+      "name_fr": "Ouganda",
+      "name_en": "Uganda",
+      "capital": [
+        "Kampala"
+      ],
+      "area_km2": 241550
+    },
+    "ua": {
+      "name_fr": "Ukraine",
+      "name_en": "Ukraine",
+      "capital": [
+        "Kyiv"
+      ],
+      "area_km2": 603500
+    },
+    "um": {
+      "name_fr": "Îles mineures éloignées des États-Unis",
+      "name_en": "United States Minor Outlying Islands",
+      "capital": [],
+      "area_km2": 34.2
+    },
+    "uy": {
+      "name_fr": "Uruguay",
+      "name_en": "Uruguay",
+      "capital": [
+        "Montevideo"
+      ],
+      "area_km2": 181034
+    },
+    "us": {
+      "name_fr": "États-Unis",
+      "name_en": "United States",
+      "capital": [
+        "Washington D.C."
+      ],
+      "area_km2": 9372610
+    },
+    "uz": {
+      "name_fr": "Ouzbékistan",
+      "name_en": "Uzbekistan",
+      "capital": [
+        "Tashkent"
+      ],
+      "area_km2": 447400
+    },
+    "va": {
+      "name_fr": "Cité du Vatican",
+      "name_en": "Vatican City",
+      "capital": [
+        "Vatican City"
+      ],
+      "area_km2": 0.44
+    },
+    "vc": {
+      "name_fr": "Saint-Vincent-et-les-Grenadines",
+      "name_en": "Saint Vincent and the Grenadines",
+      "capital": [
+        "Kingstown"
+      ],
+      "area_km2": 389
+    },
+    "ve": {
+      "name_fr": "Venezuela",
+      "name_en": "Venezuela",
+      "capital": [
+        "Caracas"
+      ],
+      "area_km2": 916445
+    },
+    "vg": {
+      "name_fr": "Îles Vierges britanniques",
+      "name_en": "British Virgin Islands",
+      "capital": [
+        "Road Town"
+      ],
+      "area_km2": 151
+    },
+    "vi": {
+      "name_fr": "Îles Vierges des États-Unis",
+      "name_en": "United States Virgin Islands",
+      "capital": [
+        "Charlotte Amalie"
+      ],
+      "area_km2": 347
+    },
+    "vn": {
+      "name_fr": "Viêt Nam",
+      "name_en": "Vietnam",
+      "capital": [
+        "Hanoi"
+      ],
+      "area_km2": 331212
+    },
+    "vu": {
+      "name_fr": "Vanuatu",
+      "name_en": "Vanuatu",
+      "capital": [
+        "Port Vila"
+      ],
+      "area_km2": 12189
+    },
+    "wf": {
+      "name_fr": "Wallis-et-Futuna",
+      "name_en": "Wallis and Futuna",
+      "capital": [
+        "Mata-Utu"
+      ],
+      "area_km2": 142
+    },
+    "ws": {
+      "name_fr": "Samoa",
+      "name_en": "Samoa",
+      "capital": [
+        "Apia"
+      ],
+      "area_km2": 2842
+    },
+    "ye": {
+      "name_fr": "Yémen",
+      "name_en": "Yemen",
+      "capital": [
+        "Sana'a"
+      ],
+      "area_km2": 527968
+    },
+    "za": {
+      "name_fr": "Afrique du Sud",
+      "name_en": "South Africa",
+      "capital": [
+        "Pretoria",
+        "Bloemfontein",
+        "Cape Town"
+      ],
+      "area_km2": 1221037
+    },
+    "zm": {
+      "name_fr": "Zambie",
+      "name_en": "Zambia",
+      "capital": [
+        "Lusaka"
+      ],
+      "area_km2": 752612
+    },
+    "zw": {
+      "name_fr": "Zimbabwe",
+      "name_en": "Zimbabwe",
+      "capital": [
+        "Harare"
+      ],
+      "area_km2": 390757
+    }
+  }
+}
