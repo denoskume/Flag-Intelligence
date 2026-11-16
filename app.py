@@ -3,6 +3,19 @@
 
 from __future__ import annotations
 
+# Flag-first portfolio experience (v0.2). The original report-rich UI is
+# retained below and can be reopened with FLAG_INTELLIGENCE_MODE=advanced.
+import os as _fi_os
+if _fi_os.environ.get("FLAG_INTELLIGENCE_MODE", "recognition").lower() != "advanced":
+    import sys as _fi_sys
+    from pathlib import Path as _fi_path
+    _fi_sys.path.insert(0, str(_fi_path(__file__).resolve().parent / "src"))
+    from flag_recognition.flag_first_app import run as _fi_run
+    _fi_run()
+    import streamlit as _fi_streamlit
+    _fi_streamlit.stop()
+
+
 import base64
 import json
 import math
