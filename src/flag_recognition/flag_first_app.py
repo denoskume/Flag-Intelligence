@@ -13,6 +13,7 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 
 from .flag_matcher import FlagMatch, build_gallery, rank_reference_flags
 from .tricolor import detect_vertical_tricolor
+from .shared_flags import resolve_french_flag_design
 from .quick_facts import CountryFacts, fetch_country_facts
 from .taxonomy import country_name_from_code
 
@@ -99,6 +100,20 @@ def _predict(image: Image.Image) -> dict:
         confidence = prediction.top1_confidence
         gap = confidence - top5[1][1] if len(top5) > 1 else 0.0
         is_plausible = prediction.is_known and gap >= 0.08
+
+        # Several ISO territory classes can represent precisely the same
+        # French national flag. Consolidate this visual design before the
+        # generic per-jurisdiction confidence threshold rejects the image.
+        shared_design = resolve_french_flag_design(top5)
+        if shared_design is not None:
+            return {
+                "code": shared_design.code,
+                "mode": "shared_design",
+                "candidates": top5,
+                "score": shared_design.combined_score,
+                "gallery_count": len(gallery),
+                "warning": shared_design.evidence,
+            }
 
         # Network-dependent references can be incomplete; do not convert their
         # distance to a probability or silently override a model prediction.
@@ -195,7 +210,14 @@ def _render_fact_sheet(code: str) -> None:
 def _render_prediction(result: dict) -> None:
     mode = result.get("mode")
     code = result.get("code")
-    if mode == "tricolor":
+    if mode == "shared_design":
+        st.success("Drapeau reconnu : France 🇫🇷")
+        st.caption(
+            "Tricolore français identifié en regroupant plusieurs classes "
+            "utilisant le même motif. Le score regroupé n'est pas une "
+            "probabilité statistique de reconnaissance."
+        )
+    elif mode == "tricolor":
         st.success(f"Drapeau reconnu : {country_name_from_code(code)}")
         st.caption(
             "Reconnaissance des trois bandes verticales et de leurs couleurs. "
@@ -263,7 +285,7 @@ def run() -> None:
         """,
         unsafe_allow_html=True,
     )
-    st.markdown('<div class="fi-eyebrow">Flag Intelligence · Vision par ordinateur</div>', unsafe_allow_html=True)
+    st.markdown('<div class="fi-eyebrow">Flag Intelligence · Vision par ordinateur · Correctif 0.2.2</div>', unsafe_allow_html=True)
     st.title("Reconnaître un drapeau. Découvrir son pays.")
     st.markdown(
         '<div class="fi-intro">Importez une image : le système identifie le drapeau, '
