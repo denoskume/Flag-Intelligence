@@ -1,0 +1,42 @@
+name: Flag-first Streamlit smoke test
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "app.py"
+      - "src/flag_recognition/flag_first_app.py"
+      - "src/flag_recognition/flag_matcher.py"
+      - "src/flag_recognition/quick_facts.py"
+      - "tests/test_flag_first.py"
+      - ".github/workflows/flag-first-smoke.yml"
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install minimal deployment dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e . --no-deps
+          python -m pip install "streamlit>=1.50,<2" numpy Pillow requests pycountry pytest
+      - name: Check Python syntax
+        run: python -m compileall -q app.py src/flag_recognition/flag_first_app.py src/flag_recognition/flag_matcher.py src/flag_recognition/quick_facts.py
+      - name: Test recognition and fact retrieval logic
+        run: python -m pytest -q tests/test_flag_first.py
+      - name: Run Streamlit interface without user input
+        run: |
+          python - <<'PY'
+          from streamlit.testing.v1 import AppTest
+          app = AppTest.from_file("app.py", default_timeout=30).run()
+          if app.exception:
+              raise AssertionError([str(item.message) for item in app.exception])
+          assert app.title, "Flag-first page title is missing"
+          assert "Reconnaître un drapeau" in app.title[0].value
+          print("Flag-first Streamlit smoke test passed")
+          PY
