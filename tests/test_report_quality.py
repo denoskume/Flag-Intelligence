@@ -1,3 +1,9 @@
+import pytest
+
+# The lightweight unit-test runner intentionally omits Streamlit and PyTorch.
+# Keep the advanced report tests for environments with the full app installed.
+pytest.importorskip("streamlit")
+
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph
 
