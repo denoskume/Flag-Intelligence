@@ -151,7 +151,7 @@ def _render_fact_sheet(code: str) -> None:
     if facts.warning:
         st.info(facts.warning)
     st.caption(
-        "Capitale, superficie et drapeau : REST Countries. "
+        "Capitale et superficie : mledoze/countries (référence locale). Drapeau : FlagCDN. "
         "Les nombres de population ne sont pas des estimations en direct."
     )
 
@@ -320,7 +320,7 @@ def run() -> None:
             "prudente avec des drapeaux de référence et, en secours, un classificateur "
             "MobileNetV3-Small. Les résultats incertains doivent être confirmés. "
             "La population provient de la Banque mondiale (dernière année observée "
-            "disponible) ou, à défaut, de REST Countries avec une réserve explicite. "
+            "disponible) sans valeur de remplacement non datée lorsque la Banque mondiale est indisponible. "
             "Les drapeaux de la démo servent à vérifier le fonctionnement, "
             "pas à mesurer les performances sur des photographies indépendantes."
         )
