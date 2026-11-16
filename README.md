@@ -22,7 +22,7 @@ MobileNetV3-Small (250 classes: ISO territories + Kosovo)
        ↓
 Uncertain? → explicit candidate list and manual confirmation
        ↓
-REST Countries + World Bank → short country fact sheet
+Bundled 250-country reference + World Bank → short country fact sheet
 ```
 
 - **Reference matching** improves reliability for clean, centered flag pictures;
@@ -33,7 +33,7 @@ REST Countries + World Bank → short country fact sheet
   is uncalibrated for difficult photos, so uncertain predictions are not forced.
 - **Manual correction** is always available when flags look alike or a photo
   does not allow reliable identification.
-- **Recent data**: geography and capital from REST Countries; the newest
+- **Recent data**: geography and capital from the bundled mledoze/countries dataset; the newest
   non-null **annual** population observation from the World Bank
   (`SP.POP.TOTL`), including year and source. A REST Countries fallback is
   clearly marked when no World Bank observation can be fetched.
@@ -79,7 +79,7 @@ tests for visually distinct/ambiguous tricolors, population provenance, and
 fallback behavior. Additional older workflows validate the advanced report
 features independently.
 
-**Data services:** [REST Countries](https://restcountries.com/),
+**Geographic reference:** [mledoze/countries](https://github.com/mledoze/countries) (ODbL 1.0).\n**Data services:**
 [World Bank indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api),
 and [FlagCDN](https://flagcdn.com/).
 
