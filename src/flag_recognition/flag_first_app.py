@@ -12,6 +12,7 @@ import streamlit as st
 from PIL import Image, ImageOps, UnidentifiedImageError
 
 from .flag_matcher import FlagMatch, build_gallery, rank_reference_flags
+from .tricolor import detect_vertical_tricolor
 from .quick_facts import CountryFacts, fetch_country_facts
 from .taxonomy import country_name_from_code
 
@@ -61,6 +62,19 @@ def _read_image(data: bytes) -> Image.Image:
 
 
 def _predict(image: Image.Image) -> dict:
+    # Detect clear cloth tricolors first, without downloading 250 reference
+    # flags or loading the neural network. A visual pattern is not a probability.
+    tricolor = detect_vertical_tricolor(image)
+    if tricolor is not None:
+        return {
+            "code": tricolor.code,
+            "mode": "tricolor",
+            "candidates": tricolor.candidates,
+            "score": None,
+            "gallery_count": 0,
+            "warning": None,
+        }
+
     match = FlagMatch(None, None, None, (), False)
     try:
         gallery = _gallery()
@@ -181,7 +195,13 @@ def _render_fact_sheet(code: str) -> None:
 def _render_prediction(result: dict) -> None:
     mode = result.get("mode")
     code = result.get("code")
-    if mode == "reference":
+    if mode == "tricolor":
+        st.success(f"Drapeau reconnu : {country_name_from_code(code)}")
+        st.caption(
+            "Reconnaissance des trois bandes verticales et de leurs couleurs. "
+            "Ce contrôle spatial n\u0027est pas une probabilité statistique."
+        )
+    elif mode == "reference":
         st.success(f"Drapeau reconnu : {country_name_from_code(code)}")
         st.caption(
             "Correspondance visuelle avec les drapeaux de référence. "
@@ -202,7 +222,9 @@ def _render_prediction(result: dict) -> None:
         with st.expander("Voir les autres pays possibles"):
             for candidate, score in candidates[:5]:
                 name = country_name_from_code(candidate)
-                if mode == "reference":
+                if mode == "tricolor":
+                    st.write(f"{name} · cohérence chromatique {score:.0%} (pas une probabilité)")
+                elif mode == "reference":
                     st.write(f"{name} · écart visuel {score:.3f} (plus petit = meilleur)")
                 else:
                     st.write(f"{name} · score modèle {score:.1%}")
