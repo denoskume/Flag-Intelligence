@@ -7,7 +7,6 @@ on:
       - ".github/workflows/build-dataset.yml"
       - "scripts/expand_worldwide.py"
       - "src/flag_recognition/splits.py"
-      - "data/README.md"
   workflow_dispatch:
 
 jobs:
@@ -53,7 +52,6 @@ jobs:
           cp -R data/splits country-flag-recognition-worldwide-dataset/data/splits
           cp -R data/source_metadata country-flag-recognition-worldwide-dataset/data/source_metadata
           cp data/taxonomy.csv country-flag-recognition-worldwide-dataset/data/taxonomy.csv
-          cp data/README.md country-flag-recognition-worldwide-dataset/README.md
 
           python - <<'PY'
           from pathlib import Path
